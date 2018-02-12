@@ -1,4 +1,6 @@
 import React from 'react'
+import DayPage from './DayPage'
+import WeekPage from "./WeekPage"
 import {
   BrowserRouter as Router,
   Route,
@@ -9,35 +11,40 @@ const BasicExample = () => (
   <Router>
     <div>
       <ul>
-        <li><Link to="/">Weekly Forecast</Link></li>
-        <li><Link to="/day">Day</Link></li>
+        <li><Link to="/">Five Day Forecast</Link></li>
+        <li><Link to="/today">Hourly Forecast</Link></li>
       </ul>
 
       <hr/>
 
-      <Route exact path="/" component={Weekly}/>
-      <Route path="/day" component={Daily}/>
+      <Route exact path="/" component={WeekPage}/>
+      <Route path="/today" component={DayPage}/>
     </div>
   </Router>
 )
 
-const Weekly = () => (
+const weekPage = () => (
   <div>
     <h2>Weekly Forecast</h2>
     <ul>
     <li>Monday</li>
+    <li>Tuesday</li>
+    <li>Wednesday</li>
+    <li>Thursday</li>
+    <li>Friday</li>
     </ul>
   </div>
 )
 
-const Daily = () => (
+const dayPage = () => (
   <div>
-    <h2>Daily Forecast</h2>
+    <h2>Hourly</h2>
     <ul>
-    <li> It's gonna be cloudy today! </li>
+    <li> It's cloudy right now! </li>
     </ul>
   </div>
 )
+
 
 
 export default BasicExample

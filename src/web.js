@@ -22,29 +22,4 @@ const BasicExample = () => (
     </div>
   </Router>
 )
-
-const weekPage = () => (
-  <div>
-    <h2>Weekly Forecast</h2>
-    <ul>
-    <li>Monday</li>
-    <li>Tuesday</li>
-    <li>Wednesday</li>
-    <li>Thursday</li>
-    <li>Friday</li>
-    </ul>
-  </div>
-)
-
-const dayPage = () => (
-  <div>
-    <h2>Hourly</h2>
-    <ul>
-    <li> It's cloudy right now! </li>
-    </ul>
-  </div>
-)
-
-
-
 export default BasicExample
